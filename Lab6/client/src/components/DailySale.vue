@@ -5,7 +5,7 @@
         <h1>Sales at day</h1>
         <br><br>
         <div class="container">
-          <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4 ">
+          <div class="col-lg-5 col-md-4 col-sm-4 col-xs-4">
           <label for="example-datepicker" class="label">Date </label>
           <input id="example-datepicker"
                  type="date"

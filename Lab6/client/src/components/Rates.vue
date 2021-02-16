@@ -26,8 +26,8 @@
 
           </div>
         </div>
-        <span v-if="this.is_chosen">
-          <div class="container">
+        <div v-if="this.is_chosen">
+          <div v-if="this.draw_chart" class="container">
              <line-chart :chart-data="datacollection"></line-chart>
         </div>
         <table class="table table-hover">
@@ -50,10 +50,10 @@
           </tr>
           </tbody>
         </table>
-          </span>
-        <span v-else>
+          </div>
+        <div v-else>
           <h3>Please select dates</h3>
-        </span>
+        </div>
       </div>
     </div>
 
@@ -87,6 +87,7 @@ export default {
       showMessage: false,
       is_chosen: '',
       datacollection: null,
+      draw_chart: false,
     };
   },
   mounted() {
@@ -101,6 +102,7 @@ export default {
           .then((res) => {
             this.rates = res.data;
             this.fillData();
+            this.draw_chart = res.data.length > 1;
           })
           .catch((error) => {
             // eslint-disable-next-line

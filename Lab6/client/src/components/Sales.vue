@@ -137,7 +137,6 @@ export default {
             fill: false,
             pointRadius: 0,
             data: this.sales.map((S) => S.PLN_sales),
-
           },
           {
             label: 'USD',
