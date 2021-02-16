@@ -83,3 +83,4 @@ l1
 .idea/
 .vs/
 debug.log
+*\node_modules
